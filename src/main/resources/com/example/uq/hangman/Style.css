@@ -1,0 +1,36 @@
+#letterButton{
+    -fx-background-color: BLACK;
+    -fx-border-color: BLUE;
+    -fx-border-width: 2;
+    -fx-text-fill: WHITE;
+    -fx-border-radius: 6 6 6 6;
+    -fx-background-radius: 7 7 7 7;
+    -fx-pref-width: 35;
+    -fx-pref-height: 33;
+    -fx-font-family: halvetica;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+
+
+}
+#letterButton2{
+    -fx-background-color: BLACK;
+    -fx-border-color: BLUE;
+    -fx-border-width: 2;
+    -fx-text-fill: WHITE;
+    -fx-border-radius: 6 6 6 6;
+    -fx-background-radius: 7 7 7 7;
+    -fx-width: 35;
+    -fx-height: 33;
+    -fx-font-family: halvetica;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+
+}
+#pane{
+    -fx-background-color:#d2cd50;
+}
+
+#rectangle{
+    -fx-border-radius: 10 10 10 10;
+}
