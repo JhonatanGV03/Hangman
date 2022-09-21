@@ -1,7 +1,7 @@
 #letterButton{
     -fx-background-color: BLACK;
-    -fx-border-color: BLUE;
-    -fx-border-width: 2;
+    -fx-border-color: RED;
+    -fx-border-width: 1.5;
     -fx-text-fill: WHITE;
     -fx-border-radius: 6 6 6 6;
     -fx-background-radius: 7 7 7 7;
@@ -10,13 +10,13 @@
     -fx-font-family: halvetica;
     -fx-font-size: 16;
     -fx-font-weight: bold;
-
+    -fx-cursor: hand;
 
 }
 #letterButton2{
     -fx-background-color: BLACK;
-    -fx-border-color: BLUE;
-    -fx-border-width: 2;
+    -fx-border-color: RED;
+    -fx-border-width: 1.5;
     -fx-text-fill: WHITE;
     -fx-border-radius: 6 6 6 6;
     -fx-background-radius: 7 7 7 7;
@@ -25,12 +25,15 @@
     -fx-font-family: halvetica;
     -fx-font-size: 14;
     -fx-font-weight: bold;
+    -fx-cursor: hand;
 
 }
 #pane{
     -fx-background-color:#d2cd50;
 }
-
-#rectangle{
-    -fx-border-radius: 10 10 10 10;
+#hbox {
+    -fx-border-color: #E6E4A0;
+    -fx-border-width: 8;
+    -fx-border-radius: 5 5 5 5;
 }
+
