@@ -10,273 +10,260 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="536.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.uq.hangman.GameController">
+<AnchorPane prefHeight="536.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uq.hangman.GameController">
    <Pane id="pane" prefHeight="536.0" prefWidth="874.0" stylesheets="@Style.css">
-      <Button id="letterButton" layoutX="305.0" layoutY="329.0" mnemonicParsing="false" prefHeight="35.0"
-              prefWidth="35.0" stylesheets="@Style.css" text="Q" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="305.0" layoutY="329.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" stylesheets="@Style.css" text="Q" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <ImageView fitHeight="250.0" fitWidth="235.0" layoutX="35.0" layoutY="133.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@img/death.png"/>
+      <ImageView fitHeight="250.0" fitWidth="235.0" layoutX="41.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@img/death.png" />
       </ImageView>
-      <Button id="letterButton2" layoutX="360.0" layoutY="329.0" mnemonicParsing="false" prefHeight="39.0"
-              prefWidth="37.0" stylesheets="@Style.css" text="W" textAlignment="CENTER">
+      <Button id="letterButton2" layoutX="360.0" layoutY="329.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="37.0" stylesheets="@Style.css" text="W" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="10.0"/>
+            <Font name="System Bold" size="10.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="415.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="E" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="415.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="E" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="470.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="R" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="470.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="R" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="525.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="T" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="525.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="T" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="580.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="Y" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="580.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Y" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="635.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="U" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="635.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="U" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="690.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="I" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="690.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="I" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="800.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="P" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="800.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="P" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="745.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="O" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="745.0" layoutY="329.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="O" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="323.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="A" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="323.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="A" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="378.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="S" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="378.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="S" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="433.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="D" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="433.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="D" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="488.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="F" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="488.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="F" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="543.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="G" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="543.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="G" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="598.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="H" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="598.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="H" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="653.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="J" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="653.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="J" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="708.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="K" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="708.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="K" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="818.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="Ñ" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="818.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Ñ" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="763.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="L" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="763.0" layoutY="390.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="L" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="361.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="Z" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="361.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Z" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="416.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="X" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="416.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="X" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="471.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="C" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="471.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="C" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="526.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="V" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="526.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="V" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="581.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="B" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="581.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="B" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" layoutX="636.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0"
-              prefWidth="31.0" stylesheets="@Style.css" text="N" textAlignment="CENTER">
+      <Button id="letterButton" layoutX="636.0" layoutY="449.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="N" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0"/>
+            <Font name="System Bold" size="13.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton2" layoutX="691.0" layoutY="449.0" mnemonicParsing="false" prefHeight="39.0"
-              prefWidth="38.0" stylesheets="@Style.css" text="M" textAlignment="CENTER">
+      <Button id="letterButton2" layoutX="691.0" layoutY="449.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="38.0" stylesheets="@Style.css" text="M" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="11.0"/>
+            <Font name="System Bold" size="11.0" />
          </font>
          <opaqueInsets>
-            <Insets/>
+            <Insets />
          </opaqueInsets>
       </Button>
       <HBox alignment="CENTER" layoutX="282.0" layoutY="194.0" prefHeight="100.0" prefWidth="586.0">
-         <HBox id="hbox" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0"
-               stylesheets="@Style.css">
+         <HBox id="hbox" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" stylesheets="@Style.css">
             <opaqueInsets>
-               <Insets/>
+               <Insets />
             </opaqueInsets>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0"
-                  style="-fx-font-family: halvetica; -fx-font-size: 35; -fx-font-weight: bold;"
-                  text="M   U   R   _   I   E   L   _   G   O" textAlignment="CENTER">
+            <Text fx:id="txtPalabra" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Inter; -fx-font-size: 35; -fx-font-weight: bold;" text="M   U   R   _   I   E   L   _   G   O" textAlignment="CENTER">
                <font>
-                  <Font name="System Bold" size="12.0"/>
+                  <Font name="System Bold" size="12.0" />
                </font>
                <HBox.margin>
-                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0"/>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
                </HBox.margin>
             </Text>
          </HBox>
       </HBox>
+      <Text fill="WHITE" layoutX="41.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Maison Neue;" text="Categoria:" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="23.0" />
+         </font>
+      </Text>
+      <HBox id="hbox2" alignment="CENTER" layoutX="70.0" layoutY="60.0" prefHeight="39.0" prefWidth="163.0" stylesheets="@Style.css">
+         <children>
+            <Text fx:id="txtCategoria" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Maison;" text="Mascotas" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <ImageView fitHeight="47.0" fitWidth="45.0" layoutX="211.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8_pets_32.png" />
+         </image>
+      </ImageView>
    </Pane>
 </AnchorPane>
