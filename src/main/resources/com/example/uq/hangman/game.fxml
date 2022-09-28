@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="536.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uq.hangman.GameController">
-   <Pane id="pane" prefHeight="536.0" prefWidth="874.0" stylesheets="@Style.css">
+   <Pane id="pane" fx:id="gamePane" prefHeight="536.0" prefWidth="874.0" stylesheets="@Style.css">
       <Button id="letterButton" layoutX="305.0" layoutY="329.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" stylesheets="@Style.css" text="Q" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -232,7 +232,7 @@
          </opaqueInsets>
       </Button>
       <HBox alignment="CENTER" layoutX="282.0" layoutY="194.0" prefHeight="100.0" prefWidth="586.0">
-         <HBox id="hbox" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" stylesheets="@Style.css">
+         <HBox id="palabraBox" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" stylesheets="@Style.css">
             <opaqueInsets>
                <Insets />
             </opaqueInsets>
@@ -251,7 +251,7 @@
             <Font name="Arial Black" size="23.0" />
          </font>
       </Text>
-      <HBox id="hbox2" alignment="CENTER" layoutX="70.0" layoutY="60.0" prefHeight="39.0" prefWidth="163.0" stylesheets="@Style.css">
+      <HBox id="categoriaBox" alignment="CENTER" layoutX="70.0" layoutY="60.0" prefHeight="39.0" prefWidth="163.0" stylesheets="@Style.css">
          <children>
             <Text fx:id="txtCategoria" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Maison;" text="Mascotas" textAlignment="CENTER">
                <font>
@@ -263,6 +263,16 @@
       <ImageView fitHeight="47.0" fitWidth="45.0" layoutX="211.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8_pets_32.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="157.0" layoutX="361.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/J1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="144.0" layoutX="657.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/J2.png" />
          </image>
       </ImageView>
    </Pane>

@@ -1,11 +1,13 @@
 package com.example.uq.hangman;
 
 import javafx.fxml.FXML;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 public class GameController {
 
-    private String palabra = "Mia"; //Palabras de prueba
+    Archivos archivos = new Archivos();
+    private String palabra = "casa"; //Palabras de prueba
     private String categoria = "Actriz";
 
     @FXML
@@ -13,10 +15,14 @@ public class GameController {
 
     @FXML
     private Text txtPalabra;
+    @FXML
+    private Pane gamePane;
 
     public void initialize (){
+        //|gamePane.setVisible(false);
+        int num = (int) (Math.random() * 3) + 1;
         tamanoPalabra();
-        txtCategoria.setText(categoria);
+        archivos.leerPalabra(txtCategoria, num);
     }
 
     public void tamanoPalabra(){
@@ -32,5 +38,4 @@ public class GameController {
     }
     //Pruebas de relleno de espacio de palabra por descubrir (Esto solo es de prueba más adelante se borran algunas
     // cosas incluyendo los comentarios que hay)
-
 }

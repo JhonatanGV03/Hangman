@@ -31,12 +31,12 @@
 #pane{
     -fx-background-color:#d2cd50;
 }
-#hbox {
+#palabraBox {
     -fx-border-color: #E6E4A0;
     -fx-border-width: 8;
     -fx-border-radius: 5 5 5 5;
 }
-#hbox2 {
+#categoriaBox {
     -fx-background-color: #E5E2A1;
     -fx-background-radius: 9 9 9 9;
 }
