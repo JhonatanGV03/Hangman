@@ -2,35 +2,47 @@ package com.example.uq.hangman;
 
 
 import javafx.scene.text.Text;
-import java.io.File;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class Archivos {
+    private File fichero;
     public Archivos() {
     }
 
-    public File escogerFichero(int num) {
-        File fichero = null;
-        switch (num){
-            case 1:
-                fichero = new File("/com/example/uq/hangman/ficheros/Animals.txt");
-                break;
-            case 2:
-                fichero = new File("/com/example/uq/hangman/ficheros/Fruits.txt");
-                break;
-            case 3:
-                fichero = new File("/com/example/uq/hangman/ficheros/Actor.txt");
-                break;
-            default:
-                fichero = new File("/com/example/uq/hangman/ficheros/Animals.txt");
-                break;
+    public void escogerFichero() {
+        int num =(int) (Math.random() * 3) + 1;
+        File fichero = switch (num) {
+            case 1 -> new File("C:\\Users\\jhona\\Desktop\\Java\\proyecto\\Hangman\\src\\main\\java\\com\\example\\uq\\hangman\\ficheros\\Animals.txt");
+            case 2 -> new File("C:\\Users\\jhona\\Desktop\\Java\\proyecto\\Hangman\\src\\main\\java\\com\\example\\uq\\hangman\\ficheros\\Actor.txt");
+            case 3 -> new File("C:\\Users\\jhona\\Desktop\\Java\\proyecto\\Hangman\\src\\main\\java\\com\\example\\uq\\hangman\\ficheros\\Fruits.txt");
+            default -> null;
+        };
+        System.out.println(Objects.requireNonNull(fichero).getName());
+        this.fichero = fichero;
+    }
+    public void leerNomArchivo(Text txtCategoria) {
+        File a = new File(fichero.getAbsolutePath());
+        txtCategoria.setText(a.getName().replaceAll("\\.\\w+$", ""));
+    }
+    public String leerPalabra() throws IOException {
+        int x;
+        String palabra;
+        ArrayList<String>  contenido = new ArrayList<>();
+        FileReader fr=new FileReader(fichero);
+        BufferedReader bfr=new BufferedReader(fr);
+        String linea;
+        while((linea = bfr.readLine())!=null)
+        {
+            contenido.add(linea);
         }
-        System.out.println(fichero.getName());
-        return fichero;
-    }
-    public void leerPalabra(Text txtCategoria, int num){
-        File fichero = new File(escogerFichero(num).getAbsolutePath());
-        txtCategoria.setText(fichero.getName().replaceAll("\\.\\w+$", ""));
-    }
-    public void escribirPalabra(){
+        bfr.close();
+        fr.close();
+        x = (int) (Math.random() * contenido.size());
+        palabra = contenido.get(x);
+        System.out.println(palabra);
+        return palabra;
     }
 }
