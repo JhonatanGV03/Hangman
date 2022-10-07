@@ -3,6 +3,7 @@ package com.example.uq.hangman;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 
@@ -12,7 +13,9 @@ public class GameController {
 
     //Variables
     Archivos archivos = new Archivos();
+    Funcionalidades funcionalidades = new Funcionalidades();
     private String palabra;
+    private int contador = 1;
 
     //Identificadores
     @FXML
@@ -20,6 +23,8 @@ public class GameController {
             btnN,btnNN,btnO,btnP,btnQ,btnR,btnS,btnT,btnU,btnV,btnW,btnX,btnY,btnZ;
     @FXML
     private Text txtCategoria, txtPalabra;
+    @FXML
+    private ImageView imgMadero;
 
     //Metodo inicializador
     public void initialize () throws IOException {
@@ -37,8 +42,10 @@ public class GameController {
         btn.setDisable(true);
         if (palabra.contains(btn.getText())) {
             System.out.println("Si");
-        } else {
+        } else if (contador<6){
+            contador++;
             System.out.println("No");
+            imgMadero.setImage(funcionalidades.elegirImagen(contador));
         }
     }
 

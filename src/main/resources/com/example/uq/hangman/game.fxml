@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="536.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uq.hangman.GameController">
    <Pane id="pane" fx:id="gamePane" prefHeight="540.0" prefWidth="880.0" stylesheets="@Style.css">
-      <Button id="letterButton" fx:id="btnQ" layoutX="305.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="35.0" prefWidth="35.0" stylesheets="@Style.css" text="Q" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnQ" layoutX="305.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="35.0" prefWidth="35.0" stylesheets="@Style.css" text="Q" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -20,10 +20,10 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <ImageView fitHeight="250.0" fitWidth="235.0" layoutX="34.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgMadero" fitHeight="250.0" fitWidth="235.0" layoutX="34.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@img/1.png" />
       </ImageView>
-      <Button id="letterButton2" fx:id="btnW" layoutX="360.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="39.0" prefWidth="37.0" stylesheets="@Style.css" text="W" textAlignment="CENTER">
+      <Button id="letterButton2" fx:id="btnW" layoutX="360.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="39.0" prefWidth="37.0" stylesheets="@Style.css" text="W" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
@@ -31,7 +31,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnE" layoutX="415.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="E" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnE" layoutX="415.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="E" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -39,7 +39,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnR" layoutX="470.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="R" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnR" layoutX="470.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="R" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -47,7 +47,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnT" layoutX="525.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="T" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnT" layoutX="525.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="T" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -55,7 +55,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnY" layoutX="580.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Y" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnY" layoutX="580.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Y" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -63,7 +63,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnU" layoutX="635.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="U" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnU" layoutX="635.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="U" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -71,7 +71,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnI" layoutX="690.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="I" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnI" layoutX="690.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="I" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -79,7 +79,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnP" layoutX="800.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="P" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnP" layoutX="800.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="P" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -87,7 +87,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnO" layoutX="745.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="O" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnO" layoutX="745.0" layoutY="329.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="O" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -95,7 +95,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnA" layoutX="323.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="A" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnA" layoutX="323.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="A" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -103,7 +103,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnS" layoutX="378.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="S" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnS" layoutX="378.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="S" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -111,7 +111,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnD" layoutX="433.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="D" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnD" layoutX="433.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="D" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -119,7 +119,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnF" layoutX="488.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="F" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnF" layoutX="488.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="F" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -127,7 +127,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnG" layoutX="543.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="G" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnG" layoutX="543.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="G" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -135,7 +135,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnH" layoutX="598.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="H" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnH" layoutX="598.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="H" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -143,7 +143,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnJ" layoutX="653.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="J" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnJ" layoutX="653.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="J" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -151,7 +151,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnK" layoutX="708.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="K" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnK" layoutX="708.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="K" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -159,7 +159,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnNN" layoutX="818.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Ñ" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnNN" layoutX="818.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Ñ" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -167,7 +167,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnL" layoutX="763.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="L" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnL" layoutX="763.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="L" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -175,7 +175,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnZ" layoutX="361.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Z" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnZ" layoutX="361.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="Z" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -183,7 +183,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnX" layoutX="416.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="X" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnX" layoutX="416.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="X" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -191,7 +191,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnC" layoutX="471.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="C" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnC" layoutX="471.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="C" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -199,7 +199,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnV" layoutX="526.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="V" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnV" layoutX="526.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="V" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -207,7 +207,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnB" layoutX="581.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="B" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnB" layoutX="581.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="B" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -215,7 +215,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton" fx:id="btnN" layoutX="636.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="N" textAlignment="CENTER">
+      <Button id="letterButton" fx:id="btnN" layoutX="636.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="28.0" prefWidth="31.0" stylesheets="@Style.css" text="N" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -223,7 +223,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button id="letterButton2" fx:id="btnM" layoutX="691.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" onKeyTyped="#onKeyTyped" prefHeight="39.0" prefWidth="38.0" stylesheets="@Style.css" text="M" textAlignment="CENTER">
+      <Button id="letterButton2" fx:id="btnM" layoutX="691.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="39.0" prefWidth="38.0" stylesheets="@Style.css" text="M" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
