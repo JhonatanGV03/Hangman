@@ -1,6 +1,8 @@
 package com.example.uq.hangman;
 
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
 import java.io.*;
@@ -12,26 +14,36 @@ public class Archivos {
     public Archivos() {
     }
 
-    public void escogerFichero() {
+    public void escogerCategoria(Text txtCategoria, ImageView imgCategoria) {
+        Image img = null;
         int num =(int) (Math.random() * 3) + 1;
-        File fichero = switch (num) {
-            case 1 -> new File("C:\\Users\\jhona\\Desktop\\Java\\proyecto\\Hangman\\src\\main\\java\\com\\example\\uq\\hangman\\ficheros\\Animals.txt");
-            case 2 -> new File("C:\\Users\\jhona\\Desktop\\Java\\proyecto\\Hangman\\src\\main\\java\\com\\example\\uq\\hangman\\ficheros\\Actor.txt");
-            case 3 -> new File("C:\\Users\\jhona\\Desktop\\Java\\proyecto\\Hangman\\src\\main\\java\\com\\example\\uq\\hangman\\ficheros\\Fruits.txt");
-            default -> null;
-        };
+        switch (num) {
+            case 1 -> {
+                fichero = new File("src/main/java/ficheros/Animals.txt");
+                img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/icons8_pets_32.png")));
+                txtCategoria.setText("Animales");
+            }
+            case 2 -> {
+                fichero = new File("src/main/java/ficheros/Actor.txt");
+                img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/actor.png")));
+                txtCategoria.setText("Actores");
+            }
+            case 3 -> {
+                fichero = new File("src/main/java/ficheros/Fruits.txt");
+                img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/fruits.png")));
+                txtCategoria.setText("Frutas");
+            }
+            default -> fichero = null;
+        }
+        imgCategoria.setImage(img);
         System.out.println(Objects.requireNonNull(fichero).getName());
-        this.fichero = fichero;
+
     }
-    public void leerNomArchivo(Text txtCategoria) {
-        File a = new File(fichero.getAbsolutePath());
-        txtCategoria.setText(a.getName().replaceAll("\\.\\w+$", ""));
-    }
-    public String leerPalabra() throws IOException {
+    public String escogerPalabra() throws IOException {
         int x;
         String palabra;
         ArrayList<String>  contenido = new ArrayList<>();
-        FileReader fr=new FileReader(fichero);
+        FileReader fr=new FileReader(fichero.getAbsolutePath());
         BufferedReader bfr=new BufferedReader(fr);
         String linea;
         while((linea = bfr.readLine())!=null)

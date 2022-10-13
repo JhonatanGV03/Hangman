@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -19,18 +18,14 @@ public class GameController {
 
     //Identificadores
     @FXML
-    private Button btnA,btnB,btnC,btnD,btnE,btnF,btnG,btnH,btnI,btnJ,btnK,btnL,btnM,
-            btnN,btnNN,btnO,btnP,btnQ,btnR,btnS,btnT,btnU,btnV,btnW,btnX,btnY,btnZ;
-    @FXML
     private Text txtCategoria, txtPalabra;
     @FXML
-    private ImageView imgMadero;
+    private ImageView imgMadero, imgCat;
 
     //Metodo inicializador
     public void initialize () throws IOException {
-        archivos.escogerFichero();
-        archivos.leerNomArchivo(txtCategoria);
-        palabra = archivos.leerPalabra();
+        archivos.escogerCategoria(txtCategoria, imgCat);
+        palabra = archivos.escogerPalabra();
         tamanoPalabra();
     }
 
@@ -38,7 +33,8 @@ public class GameController {
     @FXML
     void onActionBtnABC(ActionEvent event) {
         Button btn = (Button) event.getSource();
-        System.out.println(btn.getText());
+        char n = btn.getText().charAt(0);
+        System.out.println(n);
         btn.setDisable(true);
         if (palabra.contains(btn.getText())) {
             System.out.println("Si");

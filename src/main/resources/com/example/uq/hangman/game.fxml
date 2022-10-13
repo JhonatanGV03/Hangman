@@ -260,7 +260,7 @@
             </Text>
          </children>
       </HBox>
-      <ImageView fitHeight="47.0" fitWidth="45.0" layoutX="211.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgCat" fitHeight="47.0" fitWidth="45.0" layoutX="211.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8_pets_32.png" />
          </image>

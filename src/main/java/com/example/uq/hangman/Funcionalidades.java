@@ -10,7 +10,7 @@ public class Funcionalidades {
 
     public Image elegirImagen(int x) {
         Image img;
-        switch (x){
+        switch (x) {
             case 2 -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/2.png")));
             case 3 -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/3.png")));
             case 4 -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/4.png")));
