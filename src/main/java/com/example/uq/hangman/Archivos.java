@@ -14,21 +14,20 @@ public class Archivos {
     public Archivos() {
     }
 
-    public void escogerCategoria(Text txtCategoria, ImageView imgCategoria) {
+    public void escogerCategoria(Text txtCategoria, ImageView imgCategoria, String categoria) {
         Image img = null;
-        int num =(int) (Math.random() * 3) + 1;
-        switch (num) {
-            case 1 -> {
+        switch (categoria.toLowerCase()) {
+            case "animales" -> {
                 fichero = new File("src/main/java/ficheros/Animals.txt");
                 img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/icons8_pets_32.png")));
                 txtCategoria.setText("Animales");
             }
-            case 2 -> {
+            case "actores" -> {
                 fichero = new File("src/main/java/ficheros/Actor.txt");
                 img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/actor.png")));
                 txtCategoria.setText("Actores");
             }
-            case 3 -> {
+            case "frutas" -> {
                 fichero = new File("src/main/java/ficheros/Fruits.txt");
                 img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/fruits.png")));
                 txtCategoria.setText("Frutas");
@@ -36,8 +35,6 @@ public class Archivos {
             default -> fichero = null;
         }
         imgCategoria.setImage(img);
-        System.out.println(Objects.requireNonNull(fichero).getName());
-
     }
     public String escogerPalabra() throws IOException {
         int x;

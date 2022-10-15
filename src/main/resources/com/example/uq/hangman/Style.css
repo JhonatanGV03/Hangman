@@ -1,32 +1,41 @@
 #letterButton{
     -fx-background-color: BLACK;
-    -fx-border-color: RED;
-    -fx-border-width: 1.5;
+    -fx-border-color: BLUE;
+    -fx-border-width: 2;
     -fx-text-fill: WHITE;
     -fx-border-radius: 6 6 6 6;
     -fx-background-radius: 7 7 7 7;
-    -fx-pref-width: 35;
-    -fx-pref-height: 33;
+    -fx-pref-width: 38;
+    -fx-pref-height: 35;
     -fx-font-family: halvetica;
-    -fx-font-size: 16;
+    -fx-font-size: 13;
     -fx-font-weight: bold;
     -fx-cursor: hand;
 
 }
-#letterButton2{
-    -fx-background-color: BLACK;
-    -fx-border-color: RED;
-    -fx-border-width: 1.5;
+#letterButton:hover{
+    -fx-background-color: #333333;
+}
+#letterButton:pressed{
+    -fx-background-color:BLUE;
+}
+#buttonSalir{
+    -fx-background-color: #ff0000;
     -fx-text-fill: WHITE;
-    -fx-border-radius: 6 6 6 6;
     -fx-background-radius: 7 7 7 7;
-    -fx-width: 35;
-    -fx-height: 33;
     -fx-font-family: halvetica;
-    -fx-font-size: 14;
+    -fx-font-size: 13;
     -fx-font-weight: bold;
     -fx-cursor: hand;
-
+}
+#buttonReiniciar{
+    -fx-background-color: BLUE;
+    -fx-text-fill: WHITE;
+    -fx-background-radius: 7 7 7 7;
+    -fx-font-family: halvetica;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
 }
 #pane{
     -fx-background-color:#d2cd50;
@@ -40,4 +49,13 @@
     -fx-background-color: #E5E2A1;
     -fx-background-radius: 9 9 9 9;
 }
+#MenuButton{
+    -fx-background-color: #E5E2A1;
+    -fx-text-fill: BLACK;
+    -fx-font-size: 13;
+    -fx-background-radius: 9 9 9 9;
+    -fx-font-family: halvetica;
+    -fx-font-weight: bold;
+}
+
 

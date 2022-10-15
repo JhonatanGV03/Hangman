@@ -1,24 +1,39 @@
 package com.example.uq.hangman;
 
-import javafx.scene.image.Image;
-
-import java.util.Objects;
 
 public class Funcionalidades {
+    private String palabraEsp = "";
+    private int aciertos = 0;
     public Funcionalidades() {
     }
 
-    public Image elegirImagen(int x) {
-        Image img;
-        switch (x) {
-            case 2 -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/2.png")));
-            case 3 -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/3.png")));
-            case 4 -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/4.png")));
-            case 5 -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/5.png")));
-            case 6 -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/6.png")));
-            default -> img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/1.png")));
+    // Metodo para cambiar el guion por letra cuando
+    public String mostrarLetra(char letra, String palabra, String palabraAux, int i){
+        if (i < palabraEsp.length()) {
+            if (letra == palabraEsp.charAt(i)){
+                palabraAux = palabraAux + letra;
+                aciertos++;
+            }else {
+                palabraAux = palabraAux + palabra.charAt(i);
+            }
+            return mostrarLetra(letra,palabra,palabraAux,i + 1);
+        } else {
+            System.out.println(palabraAux);
+            return palabraAux;
         }
-        return img;
+
     }
 
+    //Getters y Setters
+    public void setPalabraEsp(String palabraEsp) {
+        this.palabraEsp = palabraEsp;
+    }
+
+    public String getPalabraEsp() {
+        return palabraEsp;
+    }
+
+    public int getAciertos() {
+        return aciertos;
+    }
 }
