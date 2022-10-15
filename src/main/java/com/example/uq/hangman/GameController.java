@@ -48,7 +48,7 @@ public class GameController {
             errores++;
             imgMadero.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/"+errores+".png"))));
         }
-        System.out.println("Errores: "+errores+ " Acertadas: "+acertadas);
+        System.out.println("Errores: "+(errores-1)+ " Acertadas: "+acertadas);
         validarGanaPierde(acertadas, errores);
     }
     public void validarGanaPierde(int acertadas, int errores){
