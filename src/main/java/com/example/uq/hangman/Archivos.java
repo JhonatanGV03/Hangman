@@ -56,7 +56,7 @@ public class Archivos {
         fr.close();
         x = (int) (Math.random() * contenido.size());
         palabra = contenido.get(x);
-        //System.out.println(palabra);
+        System.out.println(palabra);
         return palabra;
     }
 }

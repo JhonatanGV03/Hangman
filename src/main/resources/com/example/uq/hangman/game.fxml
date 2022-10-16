@@ -17,7 +17,7 @@
       <ImageView fx:id="imgMadero" fitHeight="250.0" fitWidth="235.0" layoutX="66.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@img/1.png" />
       </ImageView>
-      <HBox alignment="CENTER" layoutX="273.0" layoutY="226.0" prefHeight="89.0" prefWidth="783.0">
+      <HBox alignment="CENTER" layoutX="262.0" layoutY="229.0" prefHeight="89.0" prefWidth="819.0">
          <HBox id="palabraBox" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" stylesheets="@Style.css">
             <opaqueInsets>
                <Insets />
