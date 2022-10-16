@@ -12,12 +12,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="ventanaPrincipal" prefHeight="536.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uq.hangman.GameController">
-   <Pane id="pane" fx:id="gamePane" prefHeight="540.0" prefWidth="880.0" stylesheets="@Style.css">
-      <ImageView fx:id="imgMadero" fitHeight="250.0" fitWidth="235.0" layoutX="34.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+<AnchorPane fx:id="ventanaPrincipal" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uq.hangman.GameController">
+   <Pane id="pane" fx:id="gamePane" prefHeight="600.0" prefWidth="1100.0" stylesheets="@Style.css">
+      <ImageView fx:id="imgMadero" fitHeight="250.0" fitWidth="235.0" layoutX="66.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@img/1.png" />
       </ImageView>
-      <HBox alignment="CENTER" layoutX="274.0" layoutY="211.0" prefHeight="89.0" prefWidth="586.0">
+      <HBox alignment="CENTER" layoutX="273.0" layoutY="226.0" prefHeight="89.0" prefWidth="783.0">
          <HBox id="palabraBox" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" stylesheets="@Style.css">
             <opaqueInsets>
                <Insets />
@@ -46,21 +46,22 @@
             </Text>
          </children>
       </HBox>
-      <ImageView fitHeight="80.0" fitWidth="157.0" layoutX="361.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="157.0" layoutX="406.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/J1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="144.0" layoutX="657.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="144.0" layoutX="818.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/J2.png" />
          </image>
       </ImageView>
       <MenuButton id="MenuButton" fx:id="categoriaMenu" layoutX="70.0" layoutY="61.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="163.0" stylesheets="@Style.css" text="Elige una categoria" textAlignment="CENTER">
         <items>
-          <MenuItem fx:id="Animales" mnemonicParsing="false" onAction="#onActionCategoria" text="Animales" />
-          <MenuItem fx:id="Actores" mnemonicParsing="false" onAction="#onActionCategoria" text="Actores" />
-            <MenuItem fx:id="Frutas" mnemonicParsing="false" onAction="#onActionCategoria" text="Frutas" />
+          <MenuItem mnemonicParsing="false" onAction="#onActionCategoria" text="Animales" />
+          <MenuItem mnemonicParsing="false" onAction="#onActionCategoria" text="Cine" />
+            <MenuItem mnemonicParsing="false" onAction="#onActionCategoria" text="Frutas" />
+            <MenuItem mnemonicParsing="false" onAction="#onActionCategoria" text="Paises" />
         </items>
       </MenuButton>
       <ImageView fx:id="imgCat" fitHeight="47.0" fitWidth="45.0" layoutX="224.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
@@ -68,7 +69,7 @@
             <Image url="@img/QuestionMark.png" />
          </image>
       </ImageView>
-      <Pane fx:id="botones" disable="true" layoutX="305.0" layoutY="315.0" prefHeight="213.0" prefWidth="548.0">
+      <Pane fx:id="botones" disable="true" layoutX="390.0" layoutY="329.0" prefHeight="213.0" prefWidth="548.0">
          <children>
             <Button id="letterButton" fx:id="btnQ" layoutY="14.0" mnemonicParsing="false" onAction="#onActionBtnABC" prefHeight="35.0" prefWidth="35.0" stylesheets="@Style.css" text="Q" textAlignment="CENTER">
                <font>
@@ -288,9 +289,9 @@
             </Button>
          </children>
       </Pane>
-      <Button id="buttonSalir" layoutX="778.0" layoutY="481.0" mnemonicParsing="false" onAction="#onActionSalir" prefHeight="31.0" prefWidth="63.0" stylesheets="@Style.css" text="SALIR" />
-      <Button id="buttonReiniciar" layoutX="97.0" layoutY="469.0" mnemonicParsing="false" onAction="#onActionReiniciar" stylesheets="@Style.css" text="Reiniciar" />
-      <Text fx:id="txtAviso" fill="WHITE" layoutX="488.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Inter; -fx-font-weight: bold;" text="¡¡¡GANASTE!!!" textAlignment="CENTER" visible="false">
+      <Button id="buttonSalir" layoutX="945.0" layoutY="514.0" mnemonicParsing="false" onAction="#onActionSalir" prefHeight="31.0" prefWidth="63.0" stylesheets="@Style.css" text="SALIR" />
+      <Button id="buttonReiniciar" layoutX="101.0" layoutY="514.0" mnemonicParsing="false" onAction="#onActionReiniciar" stylesheets="@Style.css" text="Reiniciar" />
+      <Text fx:id="txtAviso" fill="WHITE" layoutX="586.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Inter; -fx-font-weight: bold;" text="¡¡¡GANASTE!!!" textAlignment="CENTER" visible="false">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

@@ -109,7 +109,7 @@ public class GameController {
         Stage stage2 = new Stage();
         Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/logo2.png")));
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("game.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 880, 540);
+        Scene scene = new Scene(fxmlLoader.load(), 1100, 600);
         stage2.getIcons().add(icon);
         stage2.setResizable(false);
         stage2.setTitle("HangMan");

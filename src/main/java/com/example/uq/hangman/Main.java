@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/logo2.png")));
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("game.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 880, 540);
+        Scene scene = new Scene(fxmlLoader.load(), 1100, 600);
         stage.getIcons().add(icon);
         stage.setResizable(false);
         stage.setTitle("HangMan");

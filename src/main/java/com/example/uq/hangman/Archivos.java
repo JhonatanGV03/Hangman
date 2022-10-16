@@ -22,15 +22,20 @@ public class Archivos {
                 img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/icons8_pets_32.png")));
                 txtCategoria.setText("Animales");
             }
-            case "actores" -> {
-                fichero = new File("src/main/java/ficheros/Actor.txt");
-                img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/actor.png")));
-                txtCategoria.setText("Actores");
+            case "cine" -> {
+                fichero = new File("src/main/java/ficheros/Cine.txt");
+                img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/claqueta.png")));
+                txtCategoria.setText("Cine");
             }
             case "frutas" -> {
                 fichero = new File("src/main/java/ficheros/Fruits.txt");
                 img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/fruits.png")));
                 txtCategoria.setText("Frutas");
+            }
+            case "paises" -> {
+                fichero = new File("src/main/java/ficheros/Paises.txt");
+                img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/paises.png")));
+                txtCategoria.setText("Paises");
             }
             default -> fichero = null;
         }
@@ -51,7 +56,7 @@ public class Archivos {
         fr.close();
         x = (int) (Math.random() * contenido.size());
         palabra = contenido.get(x);
-        System.out.println(palabra);
+        //System.out.println(palabra);
         return palabra;
     }
 }
