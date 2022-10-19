@@ -1,13 +1,12 @@
 package com.example.uq.hangman;
 
-
 public class Funcionalidades {
     private String palabraEsp = "";
     private int aciertos = 0;
     public Funcionalidades() {
     }
 
-    // Metodo para cambiar el guion por letra cuando
+    // Metodo para cambiar el guion por letra cuando la letra pertenece a la palabra
     public String mostrarLetra(char letra, String palabra, String palabraAux, int i){
         if (i < palabraEsp.length()) {
             if (letra == palabraEsp.charAt(i)){

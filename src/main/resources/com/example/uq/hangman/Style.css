@@ -1,4 +1,4 @@
-#letterButton{
+#letterButton2{
     -fx-background-color: BLACK;
     -fx-border-color: BLUE;
     -fx-border-width: 2;
@@ -16,9 +16,32 @@
 #letterButton:hover{
     -fx-background-color: #333333;
 }
-#letterButton:pressed{
+#letterButton2:pressed{
     -fx-background-color:BLUE;
 }
+#letterButton{
+    -fx-background-color: BLACK;
+    -fx-border-color: RED;
+    -fx-border-width: 2;
+    -fx-text-fill: WHITE;
+    -fx-border-radius: 6 6 6 6;
+    -fx-background-radius: 7 7 7 7;
+    -fx-pref-width: 38;
+    -fx-pref-height: 35;
+    -fx-font-family: halvetica;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+
+}
+#letterButton2:hover{
+    -fx-background-color: #333333;
+}
+#letterButton:pressed{
+    -fx-background-color:RED;
+}
+
+
 #buttonSalir{
     -fx-background-color: #ff0000;
     -fx-text-fill: WHITE;

@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
@@ -23,45 +24,25 @@ public class GameController {
     Archivos archivos = new Archivos();
     Funcionalidades funcionalidades = new Funcionalidades();
     private String palabra, palabraAux="", palabraAux2="";
+    private int puntosJ1 = 0, puntosJ2 = 0;
     private int errores = 1, acertadas = 0;
+    private boolean turnos = true;
 
     //Identificadores
     @FXML
     private AnchorPane ventanaPrincipal;
     @FXML
-    private Pane botones;
+    private Pane botones, J1, J2;
     @FXML
     private Text txtCategoria, txtPalabra, txtAviso;
     @FXML
-    private ImageView imgMadero, imgCat;
+    private ImageView imgMadero, imgCat; 
     @FXML
     private MenuButton categoriaMenu;
+    @FXML
+    private Label labelPuntosJ1, labelPuntosJ2;
 
     //Metodos
-    public void validarLetra(String letra){
-        if (palabra.contains(letra)) {
-            palabraAux = funcionalidades.mostrarLetra(letra.charAt(0), palabraAux, palabraAux2, 0);
-            txtPalabra.setText(palabraAux);
-            acertadas = funcionalidades.getAciertos();
-
-        } else if (errores<6){
-            errores++;
-            imgMadero.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/"+errores+".png"))));
-        }
-        System.out.println("Errores: "+(errores-1)+ " Acertadas: "+acertadas);
-        validarGanaPierde(acertadas, errores);
-    }
-    public void validarGanaPierde(int acertadas, int errores){
-        if (acertadas==palabra.length()){
-            txtAviso.setVisible(true);
-            botones.setDisable(true);
-        }else if (errores==6){
-            txtAviso.setVisible(true);
-            txtAviso.setText("¡¡¡Perdiste!!!");
-            botones.setDisable(true);
-            txtPalabra.setText(funcionalidades.getPalabraEsp());
-        }
-    }
 
     //metodo recursivo para obtener la palabra en guiones con espacios
     public void tamanoPalabra(String aux, String aux2,int i){
@@ -80,7 +61,65 @@ public class GameController {
             funcionalidades.setPalabraEsp(aux2);
         }
     }
-
+    public void validarLetra(String letra){
+        if (palabra.contains(letra)) {
+            puntaje(true);
+            palabraAux = funcionalidades.mostrarLetra(letra.charAt(0), palabraAux, palabraAux2, 0);
+            txtPalabra.setText(palabraAux);
+            acertadas = funcionalidades.getAciertos();
+        } else if (errores<6){
+            puntaje(false);
+            errores++;
+            imgMadero.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/uq/hangman/img/"+errores+".png"))));
+            turnos = !turnos;
+            turnos();
+        }
+        System.out.println("Errores: "+(errores-1)+ " Acertadas: "+acertadas);
+        validarGanaPierde(acertadas, errores);
+    }
+    public void puntaje (boolean acierto){
+        if (turnos){
+            if (acierto){
+                puntosJ1 += 10;
+            } else {
+                puntosJ1 -= 5;
+            }
+            labelPuntosJ1.setText(String.valueOf(puntosJ1));
+        }else {
+            if (acierto){
+                puntosJ2 += 10;
+            } else {
+                puntosJ2 -= 5;
+            }
+            labelPuntosJ2.setText(String.valueOf(puntosJ2));
+        }
+    }
+    public void turnos(){
+        if (turnos){
+            J1.setOpacity(1);
+            J2.setOpacity(0.5);
+            for (int i = 0; i < botones.getChildren().size(); i++) {
+                botones.getChildren().get(i).setId("letterButton");
+            }
+        }else if (!turnos){
+            J2.setOpacity(1);
+            J1.setOpacity(0.5);
+            for (int i = 0; i < botones.getChildren().size(); i++) {
+                botones.getChildren().get(i).setId("letterButton2");
+            }
+        }
+    }
+    public void validarGanaPierde(int acertadas, int errores){
+        if (acertadas==palabra.length()){
+            txtAviso.setVisible(true);
+            botones.setDisable(true);
+        }else if (errores==6){
+            txtAviso.setVisible(true);
+            txtAviso.setText("¡¡¡Perdiste!!!");
+            botones.setDisable(true);
+            txtPalabra.setText(funcionalidades.getPalabraEsp());
+        }
+    }
 
     //Acciones
     @FXML
@@ -96,6 +135,7 @@ public class GameController {
         tamanoPalabra(palabraAux2, palabraAux2,0);
         categoriaMenu.setVisible(false);
         botones.setDisable(false);
+        turnos();
     }
     @FXML
     void onActionBtnABC(ActionEvent event) {
